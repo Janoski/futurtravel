@@ -1,0 +1,19 @@
+{
+  "name": "silex-facebook",
+  "version": "1.0.0",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4",
+    "components-font-awesome": "~4.3.0",
+    "html5shiv": "~3.7.2",
+    "respond": "~1.4.2",
+    "less.js": "~2.5.0"
+  }
+}

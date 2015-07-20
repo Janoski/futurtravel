@@ -1,0 +1,141 @@
+/*************************    page upload photos facebook      ************************************/
+
+/*.container #container_concours
+{
+	height:100%;
+}
+
+#logoFT
+{
+	height:100%;
+}*/
+
+
+
+section
+{
+    font-family: 'Raleway', sans-serif;
+    color: #245c71;
+}
+
+
+
+
+section#bloc_vote
+{
+    background-color: rgba(255,255,255,0.7);
+    width:90%;
+    font-family: 'Raleway', sans-serif;
+    margin-left: 5%;
+    line-height:40px;
+    padding-left:15px;
+    padding-right:15px;
+    margin-top:8%;
+}
+
+
+section#texte_vote
+{
+    font-size:26px;
+    color: #245c71;
+    margin-bottom:2%;
+}
+
+@media screen and (max-width: 500px) {
+
+    section#texte_vote
+    {
+        font-size:16px;
+        line-height: 25px;
+    }
+
+}
+
+
+section#photos div.bloc_photo
+{
+    /*margin-left:6%;*/
+}
+
+
+.thumbnail
+{
+    background:white;
+    /*font-family:Raleway;*/
+    font-family: 'Raleway', sans-serif;
+}
+
+nav#nav_photos
+{
+    background-color: rgba(255,255,255,0.7);
+    border-radius:0;
+    width:90%;
+    font-family: 'Raleway', sans-serif;
+    margin-left: 5%;
+    font-weight:bold;
+}
+
+nav#nav_photos .collapse > ul li a
+{
+    color:#245c71;
+}
+
+
+section#boutons
+{
+    margin-bottom:2%;
+    margin-top:-10%;
+}
+
+
+#boutons div
+{
+    background:#245c71;
+    border:none;
+    color:white;
+    border-radius:0;
+    line-height:40px;
+    text-decoration:none;
+    margin-bottom:1%;
+}
+
+.thumbnail > div > h4
+{
+    color:#245c71;
+}
+
+
+.collapse > form > button
+{
+    background:#245c71;
+    border: #245c71;
+}
+
+
+.thumbnail:hover img + .ombreHover
+{
+    background: rgba(0,0,0,0.5);
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+}
+
+.thumbnailHover
+{
+    position:relative;
+}
+
+.ombreHover > img
+{
+    visibility:hidden;
+    width:50px;
+    top:42%;
+    right:38%;
+    position:absolute;
+}
+
+.thumbnail:hover .ombreHover > img
+{
+    visibility:visible;
+}

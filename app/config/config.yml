@@ -1,0 +1,12 @@
+facebook:
+    id: 1564069197206956
+    secret: 0020bec13523a1d507a3c02d4043e55f
+    url: http://silex-facebook.dev.io/
+database:
+  driver: mysql
+  host: localhost
+  database: silex_facebook
+  username: root
+  password: ~
+  charset: utf8
+  collation: utf8_unicode_ci
