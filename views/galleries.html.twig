@@ -1,0 +1,66 @@
+{% extends 'layout.html.twig' %}
+
+{% set bodyId = "galleries" %}
+
+{% block body %}
+    <header>
+        <div class="text-right">
+            <button data-toggle="modal" data-target="#modal" class="jQChoiceAlbum">
+                {% if played %}
+                Choisir une nouvelle photo
+                {% else %}
+                Choisir une photo
+                {% endif %}
+                <span class="iconFacebook">
+                    <i class="fa fa-facebook"></i>
+                </span>
+            </button>
+            <button  data-toggle="modal" data-target="#modal" class="jQUploadPhoto">
+                {% if played %}
+                Envoyer une nouvelle photo
+                {% else %}
+                Envoyer votre photo !
+                {% endif %}
+
+            </button>
+        </div>
+        <nav>
+            <p>Trier par :</p>
+            <ul>
+                <li>Date</li>
+                <li>Nombre de vote: {{likes}}</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <p class="lead text-center">Votez et faites gagner votre photo préférée !</p>
+        <section class="row">
+            {% for photo in photos %}
+                <div class="col-xs-6 col-md-4">
+                    <div class="thumbnail" style="background: url('{{ photo.link }}'); background-size: cover;">
+                        <a href="/photo/{{photo.photo_id}}/ft/likes"></a>
+                        <div class="description">
+                            <p>{{ photo.title }}</p>
+                            <small>{{ photo.description }}</small>
+                            <div class="fb-like" data-href="http://silex-facebook.dev.io/photo/{{ photo.photo_id }}/ft/likes" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </section>
+    </main>
+
+    <div id="modal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header"></div>
+                <div class="modal-body"></div>
+                <!--<div class="modal-footer">
+                    <button type="button" class="btn btn-primary"><i class="fa fa-check circleIcon"></i> Valider</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-close circleIcon"></i> Annuler</button>
+                </div>-->
+            </div>
+        </div>
+    </div>
+{% endblock %}

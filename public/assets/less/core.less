@@ -1,0 +1,48 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+@font-face {
+	font-family: 'Raleway';
+	src: url('../font/Raleway-Regular.ttf');
+}
+
+body {
+	font-family: 'Raleway';
+	background: url("../img/martinique.png") no-repeat fixed center;
+	background-size: cover;
+}
+
+.container {
+	height: 100%;
+	padding: 15px;
+}
+
+.modal {
+	.modal-content {
+		border-radius: 0;
+	}
+	.modal-footer {
+		padding: 10px 15px;
+		border-top: 0;
+		text-align: left;
+		background-color: #418FCC;
+	}
+	.btn {
+		border: none;
+		color: #FFF;
+		background-color: transparent;
+		.circleIcon {
+			border-radius: 100%;
+			border: 2px solid #FFF;
+			padding: 8px;
+			margin-right: 10px;
+		}
+	}
+}

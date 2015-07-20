@@ -1,0 +1,138 @@
+#galleries {
+	background: url("../img/logo.png") no-repeat left top, url("../img/martinique.png") no-repeat fixed center;
+	background-size: 50%, cover;
+	> header, > main {
+		width: 80%;
+		margin: 0 auto;
+	}
+	> header > nav, > main {
+		padding: 16px;
+		background-color: rgba(255, 255, 255, 0.7);
+		box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	}
+	.iconFacebook {
+		display: inline-block;
+		height: 20px;
+		width: 20px;
+		text-align: center;
+		margin-left: 5px;
+		background-color: #4e69a2;
+		border-radius: 50%;
+		color: #fff;
+	}
+	> header {
+		margin-top: 150px;
+		button {
+			padding: 8px 16px;
+			border: none;
+			text-decoration: none;
+			color: rgba(255, 255, 255, 0.8);
+			background-color: #245c71;
+			box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+			+ button {
+				margin-left: 8px;
+			}
+		}
+		> div:first-child {
+			margin-bottom: 16px;
+		}
+		> nav {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			p, ul, label {
+				color: #1a3d4b;
+				font-weight: bold;
+				text-transform: uppercase;
+			}
+			p {
+				margin: 0;
+			}
+			ul {
+				display: flex;
+				flex: 1 1 0;
+				justify-content: space-around;
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				> li {
+					display: inline-block;
+				}
+			}
+			form {
+				input {
+					margin-left: 8px;
+					border: none;
+				}
+			}
+		}
+	}
+	> main {
+		margin-top: 16px;
+		.thumbnail {
+			height: 310px;
+			position: relative;
+			> a {
+				display: block;
+				height: inherit;
+			}
+			> .description {
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				padding: 15px;
+				position: absolute;
+				background-color: rgba(255,255,255, 0.7);
+			}
+			
+		}
+	}
+}
+#modal {
+	.thumbnail {
+		> img {
+			height: 150px;
+		}
+	}
+	.fig {
+		input, textarea {
+			width: 100%;
+		}
+		button {
+			width: 100%;
+			padding: 5px;
+			border: none;
+			color: rgba(255, 255, 255, 0.8);
+			background-color: #245c71;
+		}
+	}
+}
+
+.btn-home {
+	&:hover{
+		text-decoration: none;
+		color: #fff;
+	}
+	padding: 8px 16px;
+	border: none;
+	text-decoration: none;
+	color: rgba(255, 255, 255, 0.8);
+	background-color: #245c71;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.from-desk{
+	padding: 15px;
+	select, textarea, input {
+		display: block;
+		width: 50%;
+		margin: 10px;
+	}
+	button{
+	margin: 10px;
+	padding: 8px 16px;
+	border: none;
+	text-decoration: none;
+	color: rgba(255, 255, 255, 0.8);
+	background-color: #245c71;
+}
+}

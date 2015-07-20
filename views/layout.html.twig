@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<title>Futur Travel - Jeux concours</title>
+
+		<!-- Bootstrap -->
+		<link href="/components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="/components/components-font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+		<!-- CSS -->
+        <link href="/assets/less/app.less" rel="stylesheet/less" type="text/css" />
+
+        <script>
+        	less = {
+        		env :"development",
+        		logLevel: 2
+        	}
+        </script>
+        <script src="/components/less.js/dist/less.min.js"></script>
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="/components/html5shiv/dist/html5shiv.min.js"></script>
+			<script src="/components/respond/dest/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body {% if bodyId is defined %}id="{{ bodyId }}"{% endif %}>
+		{% block body %}
+		{% endblock %}
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="/components/jquery/dist/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="/components/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="/assets/js/app.js"></script>
+        <script>
+            window.fbAsyncInit = function() {
+                FB.init({
+                    appId      : '{{ APP_ID }}',
+                    xfbml      : true,
+                    version    : 'v2.3'
+                });
+            };
+
+            (function(d, s, id){
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) {return;}
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/fr_FR/sdk.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+	</body>
+</html>

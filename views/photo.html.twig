@@ -1,0 +1,28 @@
+{% extends 'layout.html.twig' %}
+
+{% set bodyId = "galleries" %}
+
+{% block body %}
+    <header>
+        <div class="text-right">
+            <a class="btn-home" href="/galeries">
+                Accueil
+            </a>
+        </div>
+        <nav>
+            <h3>Photo de {{user.first_name}} {{user.last_name}}</h3>
+        </nav>
+    </header>
+
+    <main>
+        <p class="lead text-center">Votez et faites gagner votre photo préférée !</p>
+        <section class="row">
+            <div class="col-md-6 col-md-offset-3 thumbnail thumbnail" style="background: url('{{photo.link}}'); background-size: cover">
+                <!--<img src="">-->
+                <div class="description">
+                    <div class="fb-like" data-href="http://silex-facebook.dev.io/photo/{{ photo.photo_id}}/ft/likes" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}
